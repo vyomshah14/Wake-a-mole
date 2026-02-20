@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wack a mole</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .score {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .board {
+            width: 300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+        }
+
+        .hole {
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>wack a mole</h1>
+
+    <div class="score">score: <span id="score">0</span></div>
+
+    <div class="board">
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+    </div>
+
+    <button onclick="startGame()">start game</button>
+    <button onclick="stopGame()">stop game</button>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
