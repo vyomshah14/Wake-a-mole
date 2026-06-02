@@ -1,4 +1,4 @@
-# 🥀 Wack-A-Mole | Retro Neon Arcade
+# 🦔 Wack-A-Mole | Retro Neon Arcade
 
 A beautiful, high-fidelity, and responsive browser-based Wack-A-Mole (Wake-A-Mole) arcade game. Featuring a stunning glassmorphic neon layout, dynamic micro-animations, customizable difficulties, and synthesized retro sound effects.
 
