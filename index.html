@@ -1,70 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wack a mole</title>
-
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-
-        .score {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        .board {
-            width: 300px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            grid-template-rows: repeat(3, 100px);
-        }
-
-        .hole {
-            border: 2px solid black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            cursor: pointer;
-        }
-
-        button {
-            margin-top: 10px;
-            padding: 8px 16px;
-            font-size: 16px;
-        }
-    </style>
+    <title>Wack-A-Mole | Retro Neon Arcade</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>Wack-A-Mole</h1>
+            <p class="subtitle">Wack the 🦔 before they disappear!</p>
+        </div>
 
-    <h1>wack a mole</h1>
+        <div class="timer-container">
+            <div class="timer-bar">
+                <div class="timer-bar-fill" id="timer-bar-fill"></div>
+            </div>
+            <div class="timer-text" id="timer-value">30s</div>
+        </div>
 
-    <div class="score">score: <span id="score">0</span></div>
+        <div class="game-stats">
+            <div class="stat-box">
+                <div class="stat-label">Score</div>
+                <div class="stat-value" id="score">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">High Score</div>
+                <div class="stat-value" id="high-score">0</div>
+            </div>
+        </div>
 
-    <div class="board">
-        <div class="hole"></div>
-        <div class="hole"></div>
-        <div class="hole"></div>
-        <div class="hole"></div>
-        <div class="hole"></div>
-        <div class="hole"></div>
-        <div class="hole"></div>
-        <div class="hole"></div>
-        <div class="hole"></div>
+        <div class="difficulty-container">
+            <button class="diff-btn" id="diff-easy" onclick="setDifficulty('easy')">Easy</button>
+            <button class="diff-btn active" id="diff-medium" onclick="setDifficulty('medium')">Medium</button>
+            <button class="diff-btn" id="diff-hard" onclick="setDifficulty('hard')">Hard</button>
+        </div>
+
+        <div class="board-wrapper">
+            <div class="board">
+                <div class="hole" id="hole-0"></div>
+                <div class="hole" id="hole-1"></div>
+                <div class="hole" id="hole-2"></div>
+                <div class="hole" id="hole-3"></div>
+                <div class="hole" id="hole-4"></div>
+                <div class="hole" id="hole-5"></div>
+                <div class="hole" id="hole-6"></div>
+                <div class="hole" id="hole-7"></div>
+                <div class="hole" id="hole-8"></div>
+            </div>
+        </div>
+
+        <div class="controls-container">
+            <button class="btn btn-start" id="start-btn" onclick="startGame()">Start Game</button>
+            <button class="btn btn-stop" id="stop-btn" onclick="stopGame()">Stop Game</button>
+            <button class="btn btn-sound" id="sound-toggle" onclick="toggleSound()">🔊</button>
+        </div>
     </div>
 
-    <button onclick="startGame()">start game</button>
-    <button onclick="stopGame()">stop game</button>
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
